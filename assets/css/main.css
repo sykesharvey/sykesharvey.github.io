@@ -2271,3 +2271,64 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+/* Introduction */
+#banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+#banner .content {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+}
+
+#banner .image.object {
+  flex: 0 0 300px;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+#banner .image.object img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Let long text, including email addresses, wrap */
+#main .inner {
+  overflow-wrap: anywhere;
+}
+
+.activity-date {
+  float: right;
+}
+
+/* Phone layout */
+@media screen and (max-width: 736px) {
+  #banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  #banner .image.object {
+    flex: none;
+    width: 240px;
+    max-width: 100%;
+    align-self: center;
+  }
+
+  .activity-date {
+    float: none;
+    display: block;
+    margin-bottom: 0.25em;
+  }
+}
